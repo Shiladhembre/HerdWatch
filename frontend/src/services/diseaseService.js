@@ -1,0 +1,2 @@
+import {api} from './api';
+export const diseaseService={predict:data=>api.post('/predict/disease',{symptoms:data.features,...(data.caseId?{case_id:data.caseId}:{})}).then(r=>({disease:r.data.suspected_disease,risk:r.data.triage_priority==='HIGH'?'High':'Needs review',priority:r.data.triage_priority,confidence:r.data.confidence,confidenceCalibrated:r.data.confidence_calibrated,recommendation:'Veterinary confirmation recommended.'}))};

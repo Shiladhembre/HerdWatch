@@ -1,0 +1,18 @@
+{
+    "classes": [
+        "foot-and-mouth",
+        "healthy",
+        "lumpy"
+    ],
+    "class_to_index": {
+        "foot-and-mouth": 0,
+        "healthy": 1,
+        "lumpy": 2
+    },
+    "image_size": [
+        224,
+        224
+    ],
+    "model": "MobileNetV2",
+    "task": "cattle_image_classification"
+}

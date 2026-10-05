@@ -1,0 +1,2 @@
+import {api} from './api';import {caseFromApi} from './contract';
+export const analyticsService={dashboard:params=>api.get('/analytics/dashboard',{params}).then(r=>({...r.data,trend:r.data.disease_trend,summary:{...r.data.summary,suspectedOutbreaks:r.data.summary.suspected_outbreaks}})),export:params=>api.get('/analytics/export',{params:{...params,start_date:params.from,end_date:params.to,from:undefined,to:undefined}}).then(r=>r.data.map(caseFromApi))};

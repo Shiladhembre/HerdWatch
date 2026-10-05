@@ -1,0 +1,2 @@
+import {api} from './api';import {listAll,vaccineFromApi} from './contract';
+export const vaccinationService={list:params=>listAll('/vaccinations',vaccineFromApi,params),create:data=>api.post('/vaccinations',{animal_id:data.animalId,herd_id:null,vaccine_name:data.vaccine,disease_target:data.diseaseTarget||data.vaccine,dose_number:Number(data.doseNumber||1),administered_on:data.lastDose,next_due_on:data.nextDue||null,notes:data.notes||''}).then(r=>vaccineFromApi(r.data))};

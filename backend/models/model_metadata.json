@@ -1,0 +1,56 @@
+{
+  "symptom_model": {
+    "name": "symptom_disease_classifier",
+    "version": "supplied-logistic-regression",
+    "schema_version": 1,
+    "trained_at": null,
+    "verified": true,
+    "calibrated": false,
+    "features": [
+      "G01",
+      "G02",
+      "G03",
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G09",
+      "G10",
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G15",
+      "G16",
+      "G17",
+      "G18"
+    ],
+    "classes": [
+      "Antraks",
+      "FMD",
+      "Leptospirosis",
+      "Mastitis",
+      "Piroplasmosis",
+      "Surra"
+    ],
+    "sha256": "263c4465555029a2484149c0342b45e8fcafe0d36ac6707eb1a29e5daaa6697e",
+    "feature_artifact_sha256": null,
+    "triage_priorities": {},
+    "label_encoder_sha256": "08ad99e66ed24ec943ce9b3e5a1e859772f0dd125e24f687568cd1744473101e",
+    "sklearn_version": "1.6.1"
+  },
+  "outbreak_model": {
+    "name": "outbreak_risk_classifier",
+    "version": "unconfigured",
+    "schema_version": 1,
+    "trained_at": null,
+    "verified": false,
+    "calibrated": false,
+    "features": [],
+    "classes": [],
+    "sha256": null,
+    "feature_types": {},
+    "pre_outbreak_features": []
+  }
+}

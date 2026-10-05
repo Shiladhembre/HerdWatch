@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files (keep .env.example, ignore secrets)
+backend/.env
+frontend/.env
+
+# ML model artifacts (large binary files)
+backend/models/*.pkl
+backend/models/*.keras
+backend/models/cattle_image/*.keras
+
+# Uploads directory
+backend/uploads/
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Pytest / test cache
+.pytest_cache/
+backend/.pytest_cache/
+backend/pytest-cache-files-*/
+*.log
+*.xml
+htmlcov/
+.coverage
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Alembic compiled
+*.pyc
+
+# Docker volumes / secrets (compose override)
+docker-compose.override.yml

@@ -1,0 +1,2 @@
+import {api} from './api';import {listAll,caseFromApi} from './contract';
+export const outbreakService={list:params=>listAll('/outbreaks',x=>x,params),map:params=>api.get('/outbreaks/map',{params}).then(r=>({facilities:[],reports:r.data.features.map(f=>caseFromApi({...f.properties,latitude:f.geometry.coordinates[1],longitude:f.geometry.coordinates[0]}))})),predict:data=>api.post('/predict/outbreak-risk',data).then(r=>({risk:r.data.outbreak_risk,reasons:r.data.reasons||[]}))};
